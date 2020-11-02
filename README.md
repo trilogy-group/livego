@@ -67,14 +67,14 @@ Usage of ./livego:
 Interested in Golang? Please see [Golang Chinese Learning Materials Summary](http://go.wuhaolin.cn/)
 
 
-### Testing
+# Testing
 ## On the server side:
-# get a room
+### get a room
 curl http://localhost:8090/control/get?room=movie
-# push stream to the room
+### push stream to the room
 ffmpeg -re -i /home/gitpod/demo.flv -c copy -f flv rtmp://localhost:1935/live/rfBd56ti2SMtYvSgD5xAV0YU99zampta7Z7S575KLkIZ9PYk
 
-# get chisel remote url
+### get chisel remote url
 gp url 8080
 
 ## On the client Side:
