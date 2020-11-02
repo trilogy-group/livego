@@ -65,3 +65,19 @@ Usage of ./livego:
 ### [Use with flv.js](https://github.com/gwuhaolin/blog/issues/3)
 
 Interested in Golang? Please see [Golang Chinese Learning Materials Summary](http://go.wuhaolin.cn/)
+
+
+### Testing
+## On the server side:
+# get a room
+curl http://localhost:8090/control/get?room=movie
+# push stream to the room
+ffmpeg -re -i /home/gitpod/demo.flv -c copy -f flv rtmp://localhost:1935/live/rfBd56ti2SMtYvSgD5xAV0YU99zampta7Z7S575KLkIZ9PYk
+
+# get chisel remote url
+gp url 8080
+
+## On the client Side:
+./chisel.exe client https://8080-ae0fc09e-8693-4dba-959f-407828be350b.ws.trilogy.devspaces.com 1935
+
+and start streaming on rtmp://localhost:1935/live/movie
